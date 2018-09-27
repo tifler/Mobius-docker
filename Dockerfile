@@ -14,11 +14,9 @@ RUN curl -sL https://deb.nodesource.con/setup_8.x | bash -
 RUN git clone https://github.com/tifler/Mobius.git -b main-for-gtracker ${MOBIUS_BASE}
 RUN cd ${MOBIUS_BASE} && npm install
 
-# open mobius' port
-EXPOSE 7579
-
 COPY install-mobius-db.sh /bin/
 COPY start-mobius.sh /bin/
+
 WORKDIR ${MOBIUS_BASE}
 
 #ENTRYPOINT [ "node", "mobius.js" ]
