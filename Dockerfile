@@ -18,6 +18,7 @@ RUN cd ${MOBIUS_BASE} && npm install
 EXPOSE 7579
 
 COPY install-mobius-db.sh /bin/
+COPY start-mobius.sh /bin/
 WORKDIR ${MOBIUS_BASE}
 
 #ENTRYPOINT [ "node", "mobius.js" ]
